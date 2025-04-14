@@ -1,4 +1,6 @@
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket(
+    location.origin.replace(/^http/, 'ws')
+  );  
 let playerId;
 let score = 0;
 let gameBoard = document.getElementById('gameBoard');
